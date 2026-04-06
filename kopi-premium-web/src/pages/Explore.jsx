@@ -43,17 +43,12 @@ export default function Explore({ t }) {
             className={`flex flex-col lg:flex-row gap-12 lg:gap-20 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
           >
             <div className="w-full lg:w-1/2 relative group">
-              <div className="aspect-[4/5] bg-[#080808] border border-white/5 overflow-hidden relative flex flex-col justify-center items-center relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
-                {/* Fallback pattern if no distinct product image is available */}
-                <div className="absolute inset-0 flex items-center justify-center text-stone-800/20">
-                  <Droplets size={240} strokeWidth={0.5} />
-                </div>
-                
-                {/* Decorative product presentation placeholder */}
-                <div className="relative z-20 w-48 h-80 rounded-t-full rounded-b border border-amber-500/20 bg-black shadow-2xl flex flex-col items-center justify-center p-6 group-hover:border-amber-500/50 transition-colors duration-500">
-                   <p className="font-serif text-amber-500/50 tracking-widest text-vertical" style={{ writingMode: 'vertical-rl' }}>HELCOBALI</p>
-                </div>
+              <div className="aspect-[4/5] bg-white overflow-hidden relative flex items-center justify-center p-8 lg:p-12 shadow-2xl">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="relative z-10 w-full h-full object-contain filter contrast-[1.05] group-hover:scale-105 transition-transform duration-[2s]" 
+                />
               </div>
               
               {/* Product Price Tag */}

@@ -43,31 +43,34 @@ export const locales = {
       desc: "Discover our limited production cold brews, meticulously steeped to perfection. Each bottle carries a distinct profile, tailored for those who appreciate the true essence of artisan coffee.",
       products: [
         {
-          id: 'signature',
-          name: "Signature Black",
+          id: 'plaga',
+          name: "La Plaga Coffee",
+          image: "/product-plaga.jpg",
           roast: "Medium Dark",
-          origin: "Kintamani & Toraja Blend",
+          origin: "Plaga Highlands",
           notes: "Dark Chocolate, Brown Sugar, Black Cherry",
-          desc: "Our flagship cold brew. Intense yet remarkably smooth with absolutely zero astringency.",
+          desc: "Our flagship cold brew from Plaga. Intense yet remarkably smooth with absolutely zero astringency.",
           price: "Rp 65.000 / 250ml"
         },
         {
-          id: 'latte',
-          name: "Oat Milk Velvet",
-          roast: "Medium",
-          origin: "Ubud Single Origin",
-          notes: "Caramel, Roasted Nuts, Creamy Oat",
-          desc: "A luxurious dairy-free blend combining our 18-hour cold brew with premium organic oat milk.",
+          id: 'kintamani',
+          name: "La Kintamani Coffee",
+          image: "/product-kintamani.jpg",
+          roast: "Light Medium",
+          origin: "Kintamani",
+          notes: "Citrus, Floral, Honey",
+          desc: "A bright and refreshing blend cold brewed for 18 hours. Features the signature fruity notes of Kintamani beans.",
           price: "Rp 75.000 / 250ml"
         },
         {
-          id: 'reserve',
-          name: "Grand Reserve (Geisha)",
-          roast: "Light Medium",
-          origin: "Bali Highlands (Limited)",
-          notes: "Jasmine, Bergamot, Honey, Peach",
-          desc: "An extraordinary sensory experience. Extremely limited micro-lot, cold brewed for 24 hours.",
-          price: "Rp 120.000 / 250ml"
+          id: 'pupuan',
+          name: "La Pupuan Coffee",
+          image: "/product-pupuan.jpg",
+          roast: "Medium",
+          origin: "Pupuan",
+          notes: "Caramel, Roasted Nuts, Cocoa",
+          desc: "A robust and earthy profile sourced from Pupuan. Perfect balance of traditional richness and modern clarity.",
+          price: "Rp 65.000 / 250ml"
         }
       ],
       labels: {
@@ -123,31 +126,34 @@ export const locales = {
       desc: "Temukan cold brew produksi terbatas kami, diseduh secara perlahan menuju kesempurnaan. Setiap botol membawa profil rasa yang khas, dirancang khusus bagi Anda yang menghargai esensi sejati dari kopi artisan.",
       products: [
         {
-          id: 'signature',
-          name: "Signature Black",
+          id: 'plaga',
+          name: "La Plaga Coffee",
+          image: "/product-plaga.jpg",
           roast: "Medium Dark",
-          origin: "Kintamani & Agoy Toraja Blend",
+          origin: "Dataran Tinggi Plaga",
           notes: "Cokelat Hitam, Gula Aren, Ceri Hitam",
-          desc: "Cold brew unggulan kami. Intens namun sangat halus dengan nol rasa sepat (astringency).",
+          desc: "Cold brew unggulan kami dari Plaga. Intens namun sangat halus dengan nol rasa sepat (astringency).",
           price: "Rp 65.000 / 250ml"
         },
         {
-          id: 'latte',
-          name: "Oat Milk Velvet",
-          roast: "Medium",
-          origin: "Ubud Single Origin",
-          notes: "Karamel, Kacang Panggang, Krim Oat",
-          desc: "Paduan mewah bebas susu (dairy-free) yang menggabungkan cold brew 18 jam kami dengan susu oat organik premium.",
+          id: 'kintamani',
+          name: "La Kintamani Coffee",
+          image: "/product-kintamani.jpg",
+          roast: "Light Medium",
+          origin: "Kintamani",
+          notes: "Citrus, Floral, Madu",
+          desc: "Paduan yang cerah dan menyegarkan, diseduh perlahan selama 18 jam. Menampilkan ciri khas rasa buah dari biji Kintamani.",
           price: "Rp 75.000 / 250ml"
         },
         {
-          id: 'reserve',
-          name: "Grand Reserve (Geisha)",
-          roast: "Light Medium",
-          origin: "Dataran Tinggi Bali (Terbatas)",
-          notes: "Melati, Bergamot, Madu, Persik",
-          desc: "Pengalaman sensori yang luar biasa. Kopi micro-lot yang sangat terbatas, diseduh perlahan selama 24 jam.",
-          price: "Rp 120.000 / 250ml"
+          id: 'pupuan',
+          name: "La Pupuan Coffee",
+          image: "/product-pupuan.jpg",
+          roast: "Medium",
+          origin: "Pupuan",
+          notes: "Karamel, Kacang Panggang, Kakao",
+          desc: "Profil rasa yang kaya dan earthy (membumi) dari Pupuan. Keseimbangan sempurna antara kekayaan tradisional dan kejernihan modern.",
+          price: "Rp 65.000 / 250ml"
         }
       ],
       labels: {
