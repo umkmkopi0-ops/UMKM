@@ -48,18 +48,18 @@ export const locales = {
           image: "/product-plaga.jpg",
           roast: "Medium Dark",
           origin: "Plaga Highlands",
-          notes: "Dark Chocolate, Brown Sugar, Black Cherry",
-          desc: "Our flagship cold brew from Plaga. Intense yet remarkably smooth with absolutely zero astringency.",
+          notes: "Dark Cherry, Oak, Subtle Wine, Mild Spice",
+          desc: "A perfectly balanced symphony. The medium indicator level provides a rich Arabica and Robusta base, beautifully elevated by the wine-like nuances distinctly gifted by the Liberica beans.",
           price: "Rp 65.000 / 250ml"
         },
         {
           id: 'kintamani',
           name: "La Kintamani Coffee",
           image: "/product-kintamani.jpg",
-          roast: "Light Medium",
+          roast: "Dark",
           origin: "Kintamani",
-          notes: "Citrus, Floral, Honey",
-          desc: "A bright and refreshing blend cold brewed for 18 hours. Features the signature fruity notes of Kintamani beans.",
+          notes: "Intense Woody, Roasted Nuts, Bold & Heavy",
+          desc: "Bold and unapologetic. With the highest indicator level, this blend pushes the limits of intensity and deep bitterness, heavily spotlighting the robust core base over the subtle Liberica hints.",
           price: "Rp 75.000 / 250ml"
         },
         {
@@ -68,8 +68,8 @@ export const locales = {
           image: "/product-pupuan.jpg",
           roast: "Medium",
           origin: "Pupuan",
-          notes: "Caramel, Roasted Nuts, Cocoa",
-          desc: "A robust and earthy profile sourced from Pupuan. Perfect balance of traditional richness and modern clarity.",
+          notes: "Fermented Wine, Jackfruit, Wild Berries",
+          desc: "Our most vibrant blend featuring our strongest Liberica presence. The lowest indicator level translates to an exceptionally complex, wine-like fruitiness with a smooth, bright finish.",
           price: "Rp 65.000 / 250ml"
         }
       ],
@@ -131,18 +131,18 @@ export const locales = {
           image: "/product-plaga.jpg",
           roast: "Medium Dark",
           origin: "Dataran Tinggi Plaga",
-          notes: "Cokelat Hitam, Gula Aren, Ceri Hitam",
-          desc: "Cold brew unggulan kami dari Plaga. Intens namun sangat halus dengan nol rasa sepat (astringency).",
+          notes: "Ceri Hitam, Kayu Oak, Hint Anggur (Wine), Rempah Ringan",
+          desc: "Sebuah harmoni yang sangat seimbang. Tingkat indikator menengah memberikan dasar Arabika dan Robusta yang kaya, terangkat sempurna oleh nuansa anggur (wine) eksotis dari biji Liberika.",
           price: "Rp 65.000 / 250ml"
         },
         {
           id: 'kintamani',
           name: "La Kintamani Coffee",
           image: "/product-kintamani.jpg",
-          roast: "Light Medium",
+          roast: "Dark",
           origin: "Kintamani",
-          notes: "Citrus, Floral, Madu",
-          desc: "Paduan yang cerah dan menyegarkan, diseduh perlahan selama 18 jam. Menampilkan ciri khas rasa buah dari biji Kintamani.",
+          notes: "Aroma Kayu Kuat, Kacang Panggang, Sangat Pahit",
+          desc: "Sangat berani dan intens. Dengan tingkat indikator kepahitan tertinggi, kopi ini menembus batas intensitas, menonjolkan kekokohan dasar paduan Arabika dan Robusta ketimbang kehalusan Liberika.",
           price: "Rp 75.000 / 250ml"
         },
         {
@@ -151,8 +151,8 @@ export const locales = {
           image: "/product-pupuan.jpg",
           roast: "Medium",
           origin: "Pupuan",
-          notes: "Karamel, Kacang Panggang, Kakao",
-          desc: "Profil rasa yang kaya dan earthy (membumi) dari Pupuan. Keseimbangan sempurna antara kekayaan tradisional dan kejernihan modern.",
+          notes: "Anggur Fermentasi (Wine), Nangka, Buah Liar",
+          desc: "Paduan paling eksotis dengan karakter wine dari Liberika yang amat seksi. Tingkat indikator minimal menghasilkan profil rasa buah fermentasi yang sangat kompleks dan mendalam.",
           price: "Rp 65.000 / 250ml"
         }
       ],
