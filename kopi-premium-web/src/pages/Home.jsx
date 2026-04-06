@@ -19,7 +19,7 @@ export default function Home({ t }) {
     {
       id: 2,
       name: "Uncle Joe Market - Blok A & B",
-      location: "Nusa Dua, Bali",
+      location: "Nusa dua, Bali",
       image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
       desc: "Nikmati cold brew kami langsung sambil bersantai di suasana hangat Uncle Joe.",
       branches: [
