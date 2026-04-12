@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Coffee, Droplets, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';   // ← tambahan import
 
-export default function Explore({ t }) {
-  // Scroll to top on mount
+export default function Explore({ t, lang }) {   // ← tambahkan prop `lang`
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,8 +19,31 @@ export default function Explore({ t }) {
     visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
   };
 
+  // SEO title & desc per bahasa
+  const seoContent = {
+    id: {
+      title: "Koleksi Cold Brew – La Plaga, La Kintamani, La Pupuan | Helco Bali",
+      description:
+        "Jelajahi 3 varian cold brew eksklusif Helco Bali: La Plaga (Arabika+Robusta+Liberika), La Kintamani (Dark & Bold), dan La Pupuan (Liberika fruity). Diseduh 18 jam. Mulai Rp 65.000.",
+    },
+    en: {
+      title: "Cold Brew Collection – La Plaga, La Kintamani, La Pupuan | Helco Bali",
+      description:
+        "Explore Helco Bali's 3 exclusive cold brews: La Plaga (Arabica+Robusta+Liberica blend), La Kintamani (Dark & Bold), and La Pupuan (fruity Liberica-forward). 18-hour steep. From Rp 65,000.",
+    },
+  };
+
   return (
     <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto min-h-screen">
+
+      {/* ── SEO untuk halaman /explore ── */}
+      <SEO
+        lang={lang}
+        title={seoContent[lang]?.title}
+        description={seoContent[lang]?.description}
+        url="https://helcobali.vercel.app/explore"
+      />
+
       <Link to="/" className="inline-flex items-center gap-2 text-stone-400 hover:text-amber-500 transition-colors mb-16 uppercase tracking-[0.2em] text-xs font-semibold">
         <ArrowLeft size={16} />
         <span>{t.explore.labels.back}</span>
@@ -34,7 +57,7 @@ export default function Explore({ t }) {
 
       <div className="space-y-32">
         {t.explore.products.map((product, idx) => (
-          <motion.div 
+          <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -44,14 +67,12 @@ export default function Explore({ t }) {
           >
             <div className="w-full lg:w-1/2 relative group">
               <div className="aspect-[4/5] bg-white overflow-hidden relative flex items-center justify-center p-8 lg:p-12 shadow-2xl">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="relative z-10 w-full h-full object-contain filter contrast-[1.05] group-hover:scale-105 transition-transform duration-[2s]" 
+                <img
+                  src={product.image}
+                  alt={`${product.name} – Helco Bali Cold Brew`}
+                  className="relative z-10 w-full h-full object-contain filter contrast-[1.05] group-hover:scale-105 transition-transform duration-[2s]"
                 />
               </div>
-              
-              {/* Product Price Tag */}
               <div className="absolute -bottom-6 -right-6 lg:right-auto lg:-left-6 bg-amber-500 text-black px-6 py-4 font-semibold text-sm uppercase tracking-widest shadow-xl z-20">
                 {product.price}
               </div>
@@ -60,7 +81,7 @@ export default function Explore({ t }) {
             <div className="w-full lg:w-1/2 text-left">
               <span className="text-amber-500 text-xs tracking-[0.2em] uppercase font-bold">{product.roast}</span>
               <h2 className="text-4xl md:text-5xl font-serif text-white mt-4 mb-8">{product.name}</h2>
-              
+
               <p className="text-stone-400 text-lg leading-relaxed font-light mb-10 pb-10 border-b border-white/10">
                 {product.desc}
               </p>

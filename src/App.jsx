@@ -9,7 +9,7 @@ import Explore from './pages/Explore';
 export default function App() {
   const [lang, setLang] = useState('en');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   const toggleLang = () => setLang(l => (l === 'en' ? 'id' : 'en'));
   const closeMenu = () => setIsMobileMenuOpen(false);
   const t = locales[lang];
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-[#050505] text-stone-300 font-sans selection:bg-amber-500 selection:text-white overflow-x-hidden">
-        
+
         {/* NAVBAR */}
         <nav className="fixed w-full z-50 py-4 md:py-6 px-6 md:px-8 flex justify-between items-center bg-black/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
           <Link to="/" onClick={closeMenu}>
@@ -28,14 +28,14 @@ export default function App() {
               HelcoBali
             </motion.div>
           </Link>
-          
+
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-10 text-xs tracking-[0.2em] uppercase text-stone-400 font-medium">
             <a href="/#story" className="hover:text-[#d4af37] hover:-translate-y-0.5 transition-all duration-300">{t.nav.story}</a>
             <a href="/#outlets" className="hover:text-[#d4af37] hover:-translate-y-0.5 transition-all duration-300">{t.nav.locations}</a>
             <a href="/#contact" className="hover:text-[#d4af37] hover:-translate-y-0.5 transition-all duration-300">{t.nav.contact}</a>
-            <button 
-              onClick={toggleLang} 
+            <button
+              onClick={toggleLang}
               className="flex items-center gap-2 border border-white/10 px-3 py-1.5 rounded-full hover:border-[#d4af37]/50 hover:text-[#d4af37] transition-all"
             >
               <Globe size={14} />
@@ -44,7 +44,7 @@ export default function App() {
           </div>
 
           {/* Mobile Nav Toggle */}
-          <button 
+          <button
             className="md:hidden text-amber-500 p-2 relative z-50"
             onClick={() => setIsMobileMenuOpen(true)}
           >
@@ -55,14 +55,14 @@ export default function App() {
         {/* Mobile Menu Overlay */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: '100%' }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
               className="fixed inset-0 z-[60] bg-[#050505] flex flex-col items-center justify-center"
             >
-              <button 
+              <button
                 onClick={closeMenu}
                 className="absolute top-4 right-6 text-stone-400 hover:text-amber-500 p-2"
               >
@@ -74,11 +74,11 @@ export default function App() {
                 <a href="/#outlets" onClick={closeMenu} className="hover:text-amber-500 w-full py-4 border-b border-white/5 transition-colors">{t.nav.locations}</a>
                 <a href="/#contact" onClick={closeMenu} className="hover:text-amber-500 w-full py-4 border-b border-white/5 transition-colors">{t.nav.contact}</a>
                 <Link to="/explore" onClick={closeMenu} className="hover:text-amber-500 w-full py-4 border-b border-white/5 transition-colors">{t.hero.btn}</Link>
-                
+
                 <div className="w-12 h-px bg-amber-500/30 my-4"></div>
 
-                <button 
-                  onClick={() => { toggleLang(); closeMenu(); }} 
+                <button
+                  onClick={() => { toggleLang(); closeMenu(); }}
                   className="flex items-center gap-3 border border-amber-500/30 text-amber-500 px-6 py-3 rounded-full active:bg-amber-500 active:text-black transition-all"
                 >
                   <Globe size={18} />
@@ -90,8 +90,9 @@ export default function App() {
         </AnimatePresence>
 
         <Routes>
-          <Route path="/" element={<Home t={t} />} />
-          <Route path="/explore" element={<Explore t={t} />} />
+          {/* ← tambahkan prop lang={lang} di kedua Route */}
+          <Route path="/" element={<Home t={t} lang={lang} />} />
+          <Route path="/explore" element={<Explore t={t} lang={lang} />} />
         </Routes>
 
         {/* FOOTER */}

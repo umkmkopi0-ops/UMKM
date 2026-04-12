@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, MapPin, Coffee, Phone, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
-export default function Home({ t }) {
+export default function Home({ t, lang }) {
   const outlets = [
     {
       id: 1,
